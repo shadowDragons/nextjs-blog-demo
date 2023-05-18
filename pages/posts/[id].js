@@ -4,6 +4,15 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 
+// 每次请求都会执行 
+// export async function getServerSideProps({ params }) { 
+//   const postData = await  getPostData(params.id);
+//   return {
+//     props: {
+//       postData,
+//     },
+//   };
+// }
 
 export async function getStaticProps({ params }) {
   const postData = await  getPostData(params.id);
